@@ -4,6 +4,13 @@ An AI agent that reads tech news and generates a structured report, built to dem
 
 The goal is simple: show how separating concerns (what to do, how to do it, what happened, where it runs) makes agents easier to build, test, and debug.
 
+
+[![Medium](https://img.shields.io/badge/Medium-Read%20Article-black?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@magam.2004/beyond-the-prompt-the-game-ae119910da90)
+[![Java](https://img.shields.io/badge/Java-21+-blue?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/projects/jdk/21/)
+[![LLM](https://img.shields.io/badge/LLM-Groq%20/%20Llama%203.1-orange?style=for-the-badge&logo=meta&logoColor=white)](https://console.groq.com)
+[![Methodology](https://img.shields.io/badge/Methodology-GAME-red?style=for-the-badge)](https://medium.com/@magam.2004/beyond-the-prompt-the-game-ae119910da90)
+
+
 ## Setup in IntelliJ
 
 ### Requirements
