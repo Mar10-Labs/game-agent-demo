@@ -1,6 +1,6 @@
-# GAME Agent Framework — Tech News Analyzer
+# GAME Agent — Tech News Analyzer
 
-Implementation of the GAME (Goals · Actions · Memory · Environment) methodology for building AI agents in Java 21.
+Implementation of the GAME (Goals · Actions · Memory · Environment) **methodology** for building AI agents in Java 21.
 
 An AI agent that reads the day's tech news and generates a report for backend engineers, demonstrating how to separate agent loop logic from business domain.
 
@@ -75,7 +75,7 @@ The main loop is in `GameAgent.java` (~15 lines), making it easy to understand a
 ```
 src/main/java/dev/kaeron/game/
 │
-├── core/                    ← The 4 GAME components (pure framework)
+├── core/                    ← The 4 GAME components
 │   ├── Goal.java            ← G: what to achieve and how to behave
 │   ├── Tool.java            ← A: definition of a capability
 │   ├── AgentAction.java     ← concrete decision from the LLM
