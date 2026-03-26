@@ -42,21 +42,28 @@ Right-click on NewsAnalyzerDemo.java → Run 'NewsAnalyzerDemo.main()'
 
 ## How the AI Agent Works
 
-This project uses **Groq** (a fast LLM API) as the "brain" of the agent. Here's how it works:
+**GAME organizes your code. The LLM reasons about it.**
 
-**1. The agent loop:**
+GAME has 4 components that live in your code:
+- **G**oals → what the agent needs to achieve
+- **A**ctions → what tools are available
+- **M**emory → what happened so far
+- **E**nvironment → where actions actually run
+
+The LLM (Groq) is just the **reasoner** — it decides which Action to take based on the context you give it.
+
+**The agent loop:**
 ```
-User goal → Groq decides next tool → Execute tool → Repeat until done
+Goal + Actions + Memory → LLM decides → Environment executes → Memory updates → Repeat
 ```
 
-**2. What Groq receives each iteration:**
-- The user's goal (e.g., "Analyze today's tech news")
-- Available tools (`fetchHeadlines`, `readArticle`, `categorizeInsight`, `terminate`)
-- Session memory (what the agent has already done)
-- Current environment state
+**What the LLM receives each iteration:**
+- The **Goal** (what to achieve)
+- The available **Actions** (tools)
+- **Memory** (what the agent has already done)
+- The result of the last action
 
-**3. What Groq returns:**
-A JSON action like:
+**What the LLM returns:**
 ```json
 {
   "tool": "fetchHeadlines",
@@ -64,9 +71,7 @@ A JSON action like:
 }
 ```
 
-**4. The agent executes the tool and loops back to Groq** with the updated context.
-
-Groq does **not** generate content or code—it decides **which tool to call** based on the context. This is a tool-calling pattern (similar to OpenAI's function calling).
+The LLM does **not** generate content — it only decides **which tool to call**. This is a tool-calling pattern (similar to OpenAI's function calling).
 
 The main loop is in `GameAgent.java` (~15 lines), making it easy to understand and debug.
 
