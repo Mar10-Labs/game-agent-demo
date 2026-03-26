@@ -1,10 +1,8 @@
 # GAME Agent — Tech News Analyzer
 
-Implementation of the GAME (Goals · Actions · Memory · Environment) **methodology** for building AI agents in Java 21.
+An AI agent that reads tech news and generates a structured report, built to demonstrate the GAME methodology: Goals · Actions · Memory · Environment.
 
-An AI agent that reads the day's tech news and generates a report for backend engineers, demonstrating how to separate agent loop logic from business domain.
-
-Production-ready code with solid architecture principles: interface/implementation separation, externalized configuration, extensibility via inheritance or composition. The core agent loop is under 15 lines—every component is visible and debuggable.
+The goal is simple: show how separating concerns (what to do, how to do it, what happened, where it runs) makes agents easier to build, test, and debug.
 
 ## Setup in IntelliJ
 
