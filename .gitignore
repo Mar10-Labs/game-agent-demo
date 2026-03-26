@@ -1,0 +1,22 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+bin/
+
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Secrets
+.env
+
+# Eclipse
+.project
+.classpath
+
+# OS
+.DS_Store
+Thumbs.db
